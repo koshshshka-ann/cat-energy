@@ -1,0 +1,32 @@
+.intro {
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.intro__wrapper {
+  background-color: #61a53a;
+  min-height: 302px;
+}
+
+.intro__title {
+  margin: 0;
+}
+
+.intro__image-wrapper {
+  position: absolute;
+  top: 170px;
+}
+
+.intro__button-wrapper {
+  min-height: 159px;
+  padding: 20px;
+  padding-bottom: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.intro__button {
+  width: 280px;
+}
