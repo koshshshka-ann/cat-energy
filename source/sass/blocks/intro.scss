@@ -74,16 +74,10 @@
 }
 
 .intro__title {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
   color: #ffffff;
   text-align: center;
-  margin: 0;
 
   @media (min-width: $tablet-width) {
-    font-size: 60px;
-    line-height: 60px;
     color: #000000;
     text-align: left;
   }
