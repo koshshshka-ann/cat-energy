@@ -1,0 +1,71 @@
+.address__position-container {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: calc((100% - 100vw) / 2);
+    right: 50%;
+  }
+}
+
+.address__content-wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 628px;
+    padding-top: 56px;
+    padding-bottom: 56px - 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 565px - 160px;
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+    position: absolute;
+    top: 95px;
+    right: 45px;
+    background-color: #ffffff;
+  }
+}
+
+.address__title {
+  margin: 0;
+  padding-right: 16px;
+  width: min-content;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.address__text {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    text-align: end;
+    margin-bottom: 19px;
+  }
+}
+
+.address__map {
+  width: 100%;
+  min-height: 362px;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
+  }
+}
