@@ -1,7 +1,14 @@
+.address {
+  background-color: $basic-grey;
+
+  &--index {
+    background-color: #ffffff;
+  }
+}
+
 .address__position-container {
   @media (min-width: $desktop-width) {
     position: absolute;
-    left: calc((100% - 100vw) / 2);
     right: 50%;
   }
 }
@@ -61,6 +68,7 @@
 }
 
 .address__map {
+  display: block;
   width: 100%;
   min-height: 362px;
   border: none;
