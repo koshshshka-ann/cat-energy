@@ -79,6 +79,12 @@
   }
 }
 
+.slider__button-wrapper {
+  @media (min-width: $tablet-width) {
+    width: 70px;
+  }
+}
+
 .slider__button {
   padding: 0;
   width: 49px;
@@ -93,10 +99,20 @@
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
-    width: 70px;
-    min-height: 40px;
+    display: block;
+    margin: 0 auto;
+    width: max-content;
     font-size: 20px;
     line-height: 30px;
+    border-bottom: rgba(0, 0, 0, 0.24) dotted 1px;
+
+    &:hover {
+      border-bottom: rgba(0, 0, 0, 0.4) solid 1px;
+    }
+
+    &:active {
+      border-bottom: rgba(0, 0, 0, 0.0) solid 1px;
+    }
   }
 }
 
