@@ -46,7 +46,7 @@
 }
 
 .main-footer__social {
-  min-width: 280px - 74px - 74px;
+  width: 280px - 74px - 74px;
   margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 21px;
@@ -54,20 +54,20 @@
   padding-right: 74px;
 
   @media (min-width: $tablet-width) {
-    min-width: max-content;
+    width: max-content;
     margin: 0;
     padding: 0;
   }
 }
 
 .main-footer__copyright {
-  min-width: 280px;
+  width: 280px;
   margin: 0 auto;
   padding-top: 22px;
   padding-bottom: 22px;
 
   @media (min-width: $tablet-width) {
-    min-width: max-content;
+    width: max-content;
     margin: 0;
     padding: 0;
   }

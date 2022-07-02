@@ -28,9 +28,10 @@
 }
 
 .social__list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   min-width: 132px;
   justify-content: space-between;
   list-style: none;
