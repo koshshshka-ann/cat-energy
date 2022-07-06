@@ -51,106 +51,117 @@
         <p class="form-page__intro-description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       </div>
       <form class="form" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="form__block fieldset">
-          <h2 class="visually-hidden">Данные вашего кота</h2>
-          <ul class="fieldset__list">
-            <li class="fieldset__item field">
-              <label class="field__label" for="name">Имя:*</label>
-              <input class="field__input" id="name" type="text" name="name" placeholder="Барсик" required>
-            </li>
-            <li class="fieldset__item field">
-              <label class="field__label" for="weight">Вес (кг):*</label>
-              <input class="field__input" id="weight" type="number" name="weight" placeholder="7" required>
-            </li>
-            <li class="fieldset__item field">
-              <label class="field__label" for="age">Возраст (лет):</label>
-              <input class="field__input" id="age" type="number" name="age" placeholder="7">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__block fieldset">
-          <h2 class="visually-hidden">Желаемый эффект питания</h2>
-          <ul class="fieldset__list">
-            <li class="fieldset__item check">
-              <label class="check__label">
-                <input class="check__input check__input--radio" type="radio" name="program" value="slim" checked>
-                Похудение
-              </label>
-            </li>
-            <li class="fieldset__item check">
-              <label class="check__label">
-                <input class="check__input check__input--radio" type="radio" name="program" value="weight-gain">
-                Набор массы
-              </label>
-            </li>
-            <li class="fieldset__item check">
-              <label class="check__label">
-                <input class="check__input check__input--radio" type="radio" name="program" value="need-advice">
-                Не знаю (Нужен ваш совет)
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__block fieldset fieldset--line">
-          <div class="fieldset__title-wrapper">
-            <h2 class="fieldset__title">Контактные данные (владельца кота)</h2>
+        <div class="form__flex-container">
+          <fieldset class="form__block fieldset  fieldset--data">
+            <h2 class="visually-hidden">Данные вашего кота</h2>
+            <ul class="fieldset__list">
+              <li class="fieldset__item field">
+                <label class="field__label" for="name">Имя:*</label>
+                <input class="field__input" id="name" type="text" name="name" placeholder="Барсик" required>
+              </li>
+              <li class="fieldset__item field">
+                <label class="field__label" for="weight">Вес (кг):*</label>
+                <input class="field__input" id="weight" type="number" name="weight" placeholder="7" required>
+              </li>
+              <li class="fieldset__item field">
+                <label class="field__label" for="age">Возраст (лет):</label>
+                <input class="field__input" id="age" type="number" name="age" placeholder="7">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__block fieldset fieldset--radio">
+            <h2 class="visually-hidden">Желаемый эффект питания</h2>
+            <ul class="fieldset__list fieldset__list--radio">
+              <li class="fieldset__item field field--radio">
+                <label class="field__label field__label--radio">
+                  <input class="visually-hidden field__input" type="radio" name="program" value="slim" checked>
+                  <span class="field__control field__control--radio"></span>
+                    Похудение
+                </label>
+              </li>
+              <li class="fieldset__item  field field--radio">
+                <label class="field__label field__label--radio">
+                  <input class="visually-hidden field__input" type="radio" name="program" value="weight-gain">
+                  <span class="field__control field__control--radio"></span>
+                    Набор массы
+                </label>
+              </li>
+              <li class="fieldset__item  field field--radio">
+                <label class="field__label field__label--radio">
+                  <input class="visually-hidden field__input" type="radio" name="program" value="need-advice">
+                  <span class="field__control field__control--radio"></span>
+                    Не знаю (Нужен ваш совет)
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="form__block fieldset fieldset fieldset--contacts">
+          <div class="fieldset__line-container">
+            <div class="fieldset__title-wrapper">
+              <h2 class="fieldset__title fieldset__title--contacts">Контактные&nbsp;данные (владельца&nbsp;кота)</h2>
+            </div>
           </div>
-          <ul class="fieldset__list">
+          <ul class="fieldset__list fieldset__list--contacts">
             <li class="fieldset__item field">
-              <label class="fieldset__label" for="email">E-mail:*</label>
-              <input class="fieldset__input contact-input" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-              <span class="contact-input__icon-wrapper">
-                <svg class="contact-input__icon" width="19" height="14" fill="none">
-                  <use xlink:href="img/sprite.svg#input-email"></use>
-                </svg>
-              </span>
+              <label class="field__label" for="email">E-mail:*</label>
+              <input class="field__input field__input--email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <svg  class="field__input-icon field__input-icon--phone" width="20" height="15" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#input-email"></use>
+              </svg>
             </li>
             <li class="fieldset__item field">
-              <label class="fieldset__label" for="phone">Телефон:*</label>
-              <input class="fieldset__input contact-input" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
-              <span class="contact-input__icon-wrapper">
-                <svg class="contact-input__icon" width="20" height="21">
-                  <use xlink:href="img/sprite.svg#input-phone"></use>
-                </svg>
-              </span>
+              <label class="field__label" for="phone">Телефон:*</label>
+              <input class="field__input field__input--phone" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              <svg class="field__input-icon field__input-icon--phone" width="20" height="21">
+                <use xlink:href="img/sprite.svg#input-phone"></use>
+              </svg>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__block fieldset fieldset--line">
-          <div class="fieldset__title-wrapper">
-            <h2 class="fieldset__title">Комментарий</h2>
+        <fieldset class="form__block fieldset fieldset--comment">
+          <div class="fieldset__line-container">
+            <div class="fieldset__title-wrapper">
+              <h2 class="fieldset__title fieldset__title--comment">Комментарий</h2>
+            </div>
           </div>
           <div class="fieldset__item field field--textarea">
             <label class="visually-hidden" for="comments">Комментарий</label>
-            <textarea class="fieldset__input fieldset__input--textarea" id="comments" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="field__input field__input--textarea" id="comments" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
-        <fieldset class="form__block fieldset fieldset--line">
-          <div class="fieldset__title-wrapper">
-            <h2 class="fieldset__title">Дополнительно</h2>
+        <fieldset class="form__block fieldset fieldset--check">
+          <div class="fieldset__line-container">
+            <div class="fieldset__title-wrapper fieldset__title-wrapper--adding">
+              <h2 class="fieldset__title fieldset__title--adding">Дополнительно</h2>
+            </div>
           </div>
-          <ul class="fieldset__list">
-            <li class="fieldset__item check">
-              <label class="check__label">
-                <input class="check__input" type="checkbox" name="sugar" checked>
+          <ul class="fieldset__list fieldset__list--check">
+            <li class="fieldset__item field field--check">
+              <label class="field__label field__label--check">
+                <input class="visually-hidden field__input" type="checkbox" name="sugar" checked>
+                <span class="field__control field__control--checkbox"></span>
                 Сахарозаменитель
               </label>
             </li>
-            <li class="fieldset__item check">
-              <label class="check__label">
-                <input class="check__input" type="checkbox" name="water">
+            <li class="fieldset__item field field--check">
+              <label class="field__label field__label--check">
+                <input class="visually-hidden field__input" type="checkbox" name="water">
+                <span class="field__control field__control--checkbox"></span>
                 Питьевая вода
               </label>
             </li>
-            <li class="fieldset__item check">
-              <label class="check__label">
-                <input class="check__input" type="checkbox" name="milk">
+            <li class="fieldset__item field field--check">
+              <label class="field__label field__label--check">
+                <input class="visually-hidden field__input" type="checkbox" name="milk">
+                <span class="field__control field__control--checkbox"></span>
                 Молоко
               </label>
             </li>
-            <li class="fieldset__item check">
-              <label class="check__label">
-                <input class="check__input" type="checkbox" name="vitamins">
+            <li class="fieldset__item field field--check">
+              <label class="field__label field__label--check">
+                <input class="visually-hidden field__input" type="checkbox" name="vitamins">
+                <span class="field__control field__control--checkbox"></span>
                 Витамины
               </label>
             </li>

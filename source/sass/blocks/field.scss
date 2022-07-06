@@ -1,0 +1,239 @@
+.field {
+  padding-bottom: 13px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 569px;
+    margin: 0;
+  }
+
+  &--radio,
+  &--check {
+    padding-bottom: 12px;
+  }
+
+  &--textarea {
+    width: 280px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      width: 708px - 40px - 37px;
+      padding-left: 40px;
+      padding-right: 37px;
+      padding-bottom: 65px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1218px;
+      padding: 0;
+      padding-bottom: 67px;
+    }
+  }
+
+  &--check {
+    @media (min-width: $tablet-width) {
+      width: 324px;
+      padding-bottom: 32px;
+
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 244px;
+
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.field__label {
+  padding-right: 14px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &--radio {
+    color: #222222;
+  }
+
+  &--check {
+    color: #000000;
+  }
+
+  &--check,
+  &--radio {
+    display: flex;
+    align-items: center;
+
+    &:hover .field__control {
+      border-color: #bababa;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.field__input {
+  flex-grow: 1;
+  height: 44px;
+  padding: 0;
+  padding-left: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $special-grey-dark;
+  border: #e7e7e7 solid 1px;
+
+  &:hover {
+    border-color: $special-grey;
+  }
+
+  &:focus {
+    border-color: $special-grey-dark;
+    outline: 1px solid $special-grey-dark;
+  }
+
+
+  //  Данное состояние включается по умолчанию, поэтому закомментировала
+  /*
+  &:invalid,
+  &:invalid:required {
+    border-color: $status-error;
+    outline-color: $status-error;
+  }
+  */
+
+  @media (min-width: $tablet-width) {
+    height: 50px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 18px;
+  }
+
+  &::placeholder {
+    color: $special-grey-dark;
+  }
+
+  &--textarea {
+    min-height: 150px - 9px;
+    padding-top: 9px;
+    resize: none;
+
+    @media (min-width: $tablet-width) {
+      min-height: 172px - 9px;
+      padding-right: 22px;
+    }
+  }
+}
+
+.field__control {
+  display: block;
+  position: relative;
+
+  &--radio {
+    width: 28px;
+    height: 28px;
+    margin-right: 15px;
+    border: $special-grey solid 1px;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 38px;
+      height: 38px;
+      margin-right: 20px;
+    }
+  }
+
+  &--checkbox {
+    width: 24px;
+    height: 24px;
+    margin-right: 18px;
+    border: $special-grey solid 1px;
+
+    @media (min-width: $tablet-width) {
+      width: 38px;
+      height: 38px;
+      margin-right: 19px;
+    }
+  }
+}
+
+.field__input[type="radio"]:checked + .field__control--radio::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: $basic-green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -7px;
+  margin-left: -7px;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    margin-left: -9px;
+  }
+}
+
+.field__input[type="checkbox"] {
+  &:checked + .field__control--checkbox::before {
+    content: "";
+    width: 18px;
+    height: 14px;
+    background-image: url("../img/icon-check.svg");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -7px;
+    margin-left: -9px;
+  }
+}
+
+.field__input:focus + .field__input-icon {
+  fill: $basic-green;
+}
+
+
+//Данное состояние включается по умолчанию, поэтому закомментировала
+/*
+.field__input:invalid + .field__input-icon {
+  fill: $status-error;
+}
+*/
+
+.field__input-icon {
+  position: absolute;
+  fill: $special-grey-dark-2;
+
+  &--email {
+    right: 15px;
+  }
+
+  &--phone {
+    right: 12px;
+  }
+}
