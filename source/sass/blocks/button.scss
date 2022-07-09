@@ -32,4 +32,22 @@
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &--reveal {
+    background-color: $basic-grey;
+    color: $special-grey-dark;
+
+    &:hover {
+      background-color: $special-grey-light;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
+  }
 }
