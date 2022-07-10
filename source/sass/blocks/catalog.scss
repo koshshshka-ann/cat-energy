@@ -5,6 +5,10 @@
     height: 1px;
     position: absolute;
     background-color: $special-grey-light;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 

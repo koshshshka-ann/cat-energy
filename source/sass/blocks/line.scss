@@ -22,12 +22,20 @@
   margin: 0 auto;
   padding-bottom: 34px;
 
+  &--addition {
+    padding-bottom: 36px;
+  }
+
   @media (min-width: $tablet-width) {
     width: 708px;
     padding-bottom: 76px;
 
     &--adding {
       padding-bottom: 57px;
+    }
+
+    &--addition {
+      padding-bottom: 80px;
     }
   }
 
