@@ -1,0 +1,53 @@
+.button {
+  box-sizing: border-box;
+  min-height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 72px;
+  padding-right: 72px;
+  display: block;
+  cursor: pointer;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: $basic-green;
+  border: none;
+
+  &:hover {
+    background-color: $basic-green-medium;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+    padding-right: 26px;
+    padding-bottom: 13px;
+    padding-left: 26px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &--reveal {
+    background-color: $basic-grey;
+    color: $special-grey-dark;
+
+    &:hover {
+      background-color: $special-grey-light;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
+  }
+}

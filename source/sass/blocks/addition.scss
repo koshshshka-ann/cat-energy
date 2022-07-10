@@ -1,0 +1,266 @@
+.addition {
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 86px;
+  }
+}
+
+.addition__container {
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.addition__list {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 35px;
+  list-style-type: none;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    padding-bottom: 69px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding: 0;
+    width: 896px;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $special-grey;
+    position: absolute;
+  }
+}
+
+.addition__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 26px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 17px;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $special-grey;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.addition__item-wrapper {
+  @media (min-width: $tablet-width) {
+    width: 632px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.addition__link-title {
+  display: block;
+  padding-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    width: 305px;
+  }
+
+  @media (min-width: desktop-width) {
+    width: 324px;
+    padding: 0;
+  }
+}
+
+.addition__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $special-grey-dark-2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.addition__info {
+  margin: 0;
+  padding-bottom: 12px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .addition__volume,
+  .addition__price {
+    display: block;
+    text-align: end;
+  }
+
+  .addition__volume {
+    width: 192px;
+  }
+
+  .addition__price {
+    width: 94px;
+  }
+
+  .addition__button-wrapper {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .addition__volume,
+  .addition__price {
+    text-align: start;
+  }
+
+  .addition__volume {
+    width: 224px;
+    padding-right: 20px;
+  }
+
+  .addition__price {
+    width: 62px;
+  }
+
+  .addition__button-wrapper {
+    width: 244px;
+  }
+}
+
+.addition__button {
+  width: 100%;
+}
+
+.addition__gift {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  padding-top: 187px;
+  background-color: $basic-green;
+  background-image: url("../img/background-gift-mobile.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-gift-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    margin-bottom: 76px;
+    padding-top: 71px;
+    background-image: url("../img/background-gift-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-gift-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    margin: 0;
+    padding-top: 185px;
+    background-image: url("../img/background-gift-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-gift-desktop@2x.jpg");
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 59px;
+    left: 101px;
+
+    @media (min-width: $desktop-width) {
+      top: 57px;
+      left: 77px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 56px;
+      left: 84px;
+    }
+  }
+}
+
+.addition__gift-description {
+  margin: 0;
+  padding-left: 58px;
+  padding-right: 61px;
+  padding-bottom: 43px;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 422px;
+    padding-right: 124px;
+    padding-bottom: 69px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 41px;
+    padding-right: 43px;
+    padding-bottom: 45px;
+    text-align: center;
+  }
+}

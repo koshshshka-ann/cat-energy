@@ -1,0 +1,27 @@
+.copyright__logo {
+  fill: $special-grey-medium;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  color: $special-grey-dark;
+
+  &:hover .copyright__logo {
+    fill: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 163px;
+    margin-left: auto;
+  }
+}

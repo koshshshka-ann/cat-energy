@@ -37,29 +37,29 @@ const html = () => {
   }
 
   // Scripts
-/*
+
   const scripts = () => {
   return gulp.src('source/js/script.js')
   .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());
   }
-*/
+
   // Images
 
-  const optimizeImages = () => {
+const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
   }
 
-  const copyImages = () => {
+const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(gulp.dest('build/img'))
   }
 
   // WebP
 
-  const createWebp = () => {
+const createWebp = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh({
   webp: {}
@@ -69,13 +69,13 @@ const html = () => {
 
   // SVG
 
-  const svg = () =>
+const svg = () =>
   gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 
-  const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
+const sprite = () => {
+  return gulp.src('source/img/sprite/*.svg')
   .pipe(svgo())
   .pipe(svgstore({
   inlineSvg: true
@@ -86,7 +86,7 @@ const html = () => {
 
   // Copy
 
-  const copy = (done) => {
+const copy = (done) => {
   gulp.src([
   'source/fonts/*.{woff2,woff}',
   'source/*.ico',
@@ -99,13 +99,13 @@ const html = () => {
 
   // Clean
 
-  const clean = () => {
+const clean = () => {
   return del('build');
   };
 
   // Server
 
-  const server = (done) => {
+const server = (done) => {
   browser.init({
   server: {
   baseDir: 'build'
@@ -119,29 +119,29 @@ const html = () => {
 
   // Reload
 
-  const reload = (done) => {
+const reload = (done) => {
   browser.reload();
   done();
   }
 
   // Watcher
 
-  const watcher = () => {
-  gulp.watch('source/less/**/*.less', gulp.series(styles));
+const watcher = () => {
+  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   //gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
   }
 
   // Build
 
-  export const build = gulp.series(
+export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
   gulp.parallel(
   styles,
   html,
-  //scripts,
+  scripts,
   svg,
   sprite,
   createWebp
@@ -150,14 +150,14 @@ const html = () => {
 
   // Default
 
-  export default gulp.series(
+export default gulp.series(
   clean,
   copy,
   copyImages,
   gulp.parallel(
   styles,
   html,
-  //scripts,
+  scripts,
   svg,
   sprite,
   createWebp
