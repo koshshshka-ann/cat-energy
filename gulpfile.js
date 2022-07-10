@@ -37,13 +37,13 @@ const html = () => {
   }
 
   // Scripts
-/*
+
   const scripts = () => {
   return gulp.src('source/js/script.js')
   .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());
   }
-*/
+
   // Images
 
 const optimizeImages = () => {
@@ -141,7 +141,7 @@ export const build = gulp.series(
   gulp.parallel(
   styles,
   html,
-  //scripts,
+  scripts,
   svg,
   sprite,
   createWebp
@@ -157,7 +157,7 @@ export default gulp.series(
   gulp.parallel(
   styles,
   html,
-  //scripts,
+  scripts,
   svg,
   sprite,
   createWebp
